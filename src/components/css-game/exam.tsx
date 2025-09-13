@@ -1,8 +1,17 @@
 import React, { forwardRef } from "react";
 import Image from "next/image";
 import { EXAMS } from "@/helper/data";
-const Exam = forwardRef<HTMLImageElement, { questionIndex: number }>(
-  ({ questionIndex }: { questionIndex: number }, ref) => {
+import { Challenge } from "@/types/api";
+
+interface ExamProps {
+  questionIndex: number;
+  challenge?: Challenge;
+}
+
+const Exam = forwardRef<HTMLImageElement, ExamProps>(
+  ({ questionIndex, challenge }: ExamProps, ref) => {
+    const imageSource = challenge?.image || EXAMS[questionIndex]?.image;
+
     return (
       <div>
         <div className="h-full flex flex-col justify-cente">
@@ -12,7 +21,7 @@ const Exam = forwardRef<HTMLImageElement, { questionIndex: number }>(
               width={400}
               height={300}
               ref={ref}
-              src={EXAMS[questionIndex]?.image}
+              src={`http://localhost:4000${imageSource}`}
               alt="exam"
             ></Image>
           </div>

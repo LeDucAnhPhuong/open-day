@@ -6,12 +6,14 @@ interface CodeEditorProps {
   language: string;
   value: string;
   onChange: (value: string | undefined) => void;
+  disabled?: boolean;
 }
 
 export default function CodeEditor({
   language,
   value,
   onChange,
+  disabled,
 }: CodeEditorProps) {
   return (
     <Editor
@@ -26,7 +28,7 @@ export default function CodeEditor({
         lineNumbers: "on",
         roundedSelection: false,
         scrollBeyondLastLine: false,
-        readOnly: false,
+        readOnly: disabled,
       }}
     />
   );
