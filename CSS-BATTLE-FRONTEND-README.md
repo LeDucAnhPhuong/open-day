@@ -88,7 +88,7 @@ src/
    Edit `.env.local`:
    ```env
    NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
-   NEXT_PUBLIC_SOCKET_URL=ws://localhost:4000
+   NEXT_PUBLIC_SOCKET_URL=wss://localhost:4000
    ```
 
 3. **Start the development server**
@@ -223,7 +223,7 @@ onBattleCreate((data) => {
 ```env
 # Required
 NEXT_PUBLIC_API_BASE_URL=http://localhost:4000  # Backend API URL
-NEXT_PUBLIC_SOCKET_URL=ws://localhost:4000      # WebSocket URL
+NEXT_PUBLIC_SOCKET_URL=wss://localhost:4000      # WebSocket URL
 
 # Optional
 NODE_ENV=development                            # Environment mode

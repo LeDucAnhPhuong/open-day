@@ -10,7 +10,7 @@ services:
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:4000}
-      - NEXT_PUBLIC_SOCKET_URL=${NEXT_PUBLIC_SOCKET_URL:-ws://localhost:4000}
+      - NEXT_PUBLIC_SOCKET_URL=${NEXT_PUBLIC_SOCKET_URL:-wss://localhost:4000}
     env_file:
       - .env.production
     restart: unless-stopped
@@ -28,7 +28,7 @@ services:
     environment:
       - NODE_ENV=development
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:4000}
-      - NEXT_PUBLIC_SOCKET_URL=${NEXT_PUBLIC_SOCKET_URL:-ws://localhost:4000}
+      - NEXT_PUBLIC_SOCKET_URL=${NEXT_PUBLIC_SOCKET_URL:-wss://localhost:4000}
     env_file:
       - .env.development
     volumes:
