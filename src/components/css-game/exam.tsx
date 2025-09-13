@@ -21,7 +21,7 @@ const Exam = forwardRef<HTMLImageElement, ExamProps>(
               width={400}
               height={300}
               ref={ref}
-              src={`http://localhost:4000${imageSource}`}
+              src={imageSource}
               alt="exam"
             ></Image>
           </div>

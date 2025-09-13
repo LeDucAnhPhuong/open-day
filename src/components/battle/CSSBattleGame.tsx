@@ -209,7 +209,7 @@ export function CSSBattleGame({
             {/* Preview */}
             <Preview
               ref={previewRef}
-              imageTarget={`http://localhost:4000${challenge?.image}`}
+              imageTarget={challenge?.image}
               imageDiffSrc={imageDiffSrc}
             />
 
