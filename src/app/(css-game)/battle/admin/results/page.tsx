@@ -12,7 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { BattleResult, UserRole } from "@/types/api";
 import io from "socket.io-client";
 
-const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || "ws://localhost:4000";
+const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || "wss://localhost:4000";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 export default function AdminResultsPage() {

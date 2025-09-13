@@ -115,7 +115,7 @@ docker build -f Dockerfile.dev -t css-battle-frontend-dev .
 ```bash
 docker run -p 3000:3000 \
   -e NEXT_PUBLIC_API_URL=http://localhost:4000 \
-  -e NEXT_PUBLIC_SOCKET_URL=ws://localhost:4000 \
+  -e NEXT_PUBLIC_SOCKET_URL=wss://localhost:4000 \
   css-battle-frontend
 ```
 
@@ -126,7 +126,7 @@ docker run -p 3000:3000 \
   -v $(pwd):/app \
   -v /app/node_modules \
   -e NEXT_PUBLIC_API_URL=http://localhost:4000 \
-  -e NEXT_PUBLIC_SOCKET_URL=ws://localhost:4000 \
+  -e NEXT_PUBLIC_SOCKET_URL=wss://localhost:4000 \
   css-battle-frontend-dev
 ```
 
