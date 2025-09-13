@@ -46,7 +46,7 @@ export function ChallengeCard({
           )}`}
         />
         <Image
-          src={`http://localhost:4000${challenge.image}`}
+          src={challenge?.image}
           alt={`Challenge ${challenge._id}`}
           className="w-full h-48 object-cover"
           width={400}

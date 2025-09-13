@@ -6,7 +6,7 @@ import { ChatMessage, BattleUpdate, BattleResult } from "@/types/api";
 import { Socket as Soc } from "socket.io-client";
 import { useCookies } from "react-cookie";
 
-const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || "ws://localhost:4000";
+const SOCKET_URL = process.env.NEXT_PUBLIC_SOCKET_URL || "ws://api.kul-local.me";
 
 interface SocketState {
   isConnected: boolean;
