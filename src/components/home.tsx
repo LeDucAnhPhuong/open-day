@@ -4,7 +4,7 @@ import React from "react";
 import thumnail from "@images/exams/thumnail.png";
 import froggy from "@images/exams/froggy-flex.png";
 import css_battle from "@images/exams/css-battle.png";
-import Card from "./ui/card";
+import Card from "./ui/mycard";
 import { useRouter } from "next/navigation";
 const Home = () => {
   const router = useRouter();
@@ -43,7 +43,7 @@ const Home = () => {
           </Card>
         </div>
         <div className="w-[350px] h-[350px] cursor-pointer">
-          <Card className="p-10" onClick={() => router.push("/css-game")}>
+          <Card className="p-10" onClick={() => router.push("/events")}>
             <div className="flex flex-col justify-between h-full">
               <h2 className="text-center uppercase font-semibold text-3xl text-white">
                 FPT css battle

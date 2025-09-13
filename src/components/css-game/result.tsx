@@ -7,11 +7,13 @@ const Result = ({
   handleSubmit,
   setBestPercent,
   bestPercent,
+  disabled = false,
 }: {
   percentCompare: number;
   handleSubmit: (percent: number) => void;
   setBestPercent: (percent: number) => void;
   bestPercent: number;
+  disabled?: boolean;
 }) => {
   const styleOfPercentCompare = (percent: number) => {
     if (percent > 80) return "text-green-700";
@@ -42,8 +44,9 @@ const Result = ({
           onClick={() => handleSubmit(bestPercent)}
           className="text-black w-[100px]"
           variant="outline"
+          disabled={disabled}
         >
-          Nộp
+          {disabled ? "Đã nộp" : "Nộp"}
         </Button>
       </div>
     </div>
